@@ -3,11 +3,11 @@ from django.http import JsonResponse
 import requests
 from decouple import config
 
-# api_key = config("API_KEY", default="")
-# req_url = f"{config("BASE_URL", default="")}?key={api_key}&"
+api_key = config("API_KEY", default="")
+req_url = f"{config("BASE_URL", default="")}?key={api_key}&"
 
-api_key = "6ccd8e1beac44805bc880432240107"
-req_url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&"
+# api_key = "6ccd8e1beac44805bc880432240107"
+# req_url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&"
 
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
